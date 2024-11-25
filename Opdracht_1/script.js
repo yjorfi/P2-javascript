@@ -47,5 +47,5 @@ document.getElementById("opdr8").innerText = `uw producten zijn: ${winkelmand.jo
 winkelmand.splice(1, 2);
 document.getElementById("opdr9").innerText = `uw producten zijn: ${winkelmand.join(" ")}.`
 
-//opdracht 10
-document.getElementById("opdr10").innerText = winkelmand.sort();
+//opdracht 10                                                          
+document.getElementById("opdr10").innerText = winkelmand.sort();  
