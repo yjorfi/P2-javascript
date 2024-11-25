@@ -4,7 +4,7 @@ winkelmand.push("Bananen")
 winkelmand.push("Whiskey")
 winkelmand.push("Chips")
 winkelmand.push("Bonen")
-winkelmand.push("aardappelen")
+winkelmand.push("Aardappelen")
 
 //opdracht 1
 let aantalProducten = winkelmand.length;
@@ -48,4 +48,6 @@ winkelmand.splice(1, 2);
 document.getElementById("opdr9").innerText = `uw producten zijn: ${winkelmand.join(" ")}.`
 
 //opdracht 10                                                          
-document.getElementById("opdr10").innerText = winkelmand.sort();  
+document.getElementById("opdr10").innerText;
+winkelmand.sort();  
+document.getElementById("opdr10").innerText = winkelmand;
