@@ -1,8 +1,4 @@
-let input = document.getElementById("input")
-let output = document.getElementById("output")
-
-//   Number.value = '';
-
+<<<<<<< Updated upstream
 //   let getal = 10;
 //   for(let i = 1; i <= 10; i++){
 //   document.getElementById('output').innerHTML += (i + " x " + getal + " = " + i * getal) + "<br>"
