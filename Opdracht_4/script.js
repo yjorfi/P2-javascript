@@ -9,7 +9,7 @@ let input = document.getElementById("input")
 function tafel_van() {
 
     output.innerHTML = " "
-    let getal = input.value
+    let getal = input.value;
     for (let i = 1; i <= 10; i++) {
         document.getElementById('output').innerHTML += (i + " x " + getal + " = " + i * getal) + "<br>"
     }
