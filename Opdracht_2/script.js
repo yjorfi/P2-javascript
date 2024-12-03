@@ -1,5 +1,4 @@
-const output = document.getElementById("output");
-
+let output = document.getElementById("output");
 let input = document.getElementById("input");
 
 let shop = [];
