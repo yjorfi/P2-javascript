@@ -8,33 +8,46 @@ let player;
 let computer;
 let resultaat;
 
-possibleChoices.forEach(button => button.addEventListener('click', (e) => {
+possibleChoices.forEach(
+  button => button.addEventListener('click', (e) => {
     player = e.target.id;
     playerChoice.innerHTML = player;
     computerkeuze();
     result();  
 }));
-function computerkeuze() {
-    const randomnummer = Math.floor(Math.random() * 3) + 1;  
+function 
+
+computerkeuze() {
+    const randomnummer = 
+    Math.floor(Math.random() * 3) + 1;  
   
     if (randomnummer === 1) {
       computer = "rock";
-    } else if (randomnummer === 2) {
+    } 
+    else if (randomnummer === 2) {
       computer = "paper";
     } else {
       computer = "scissor";
     }
   
     computerChoice.innerHTML = computer;    }
-  function result() {
+  function result(
+
+  ) 
+  {
+
     if (computer === player) {
         resultaat = "Gelijkspel";  
     } else if (computer === 'rock' && player === 'paper') {
         resultaat = "Hoera je wint ";  
+
     } else if (computer === 'rock' && player === 'scissor')
         {
+
             resultaat = "Loser";  
-    } else if (computer === 'paper' && player === 'scissor') {
+
+    } else if
+     (computer === 'paper' && player === 'scissor') {
 
         resultaat = "Hoera je wint ";  
     } else if (computer === 'paper' && player === 'rock') {
