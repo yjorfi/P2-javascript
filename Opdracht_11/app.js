@@ -2,42 +2,54 @@ let hunger = 100;
 let energy = 100;
 let happiness = 100;
 
-let hungerText = document.getElementById("hungernumber");
-let hungerBar = document.getElementById("hungerbar");
-let energyText = document.getElementById("energynumber");
-let energyBar = document.getElementById("energybar");
-let happinessText = document.getElementById("happinessnumber");
-let happinessBar = document.getElementById("happinessbar");
-let statusMessage = document.getElementById("statusmessage");
-let feedButton = document.getElementById("eat");
+let hungerText = document.getElementById("hunger");
+let hungerBar = document.getElementById("hungerBar");
+let energyText = document.getElementById("energy");
+let energyBar = document.getElementById("energyBar");
+let happinessText = document.getElementById("happiness");
+let happinessBar = document.getElementById("happinessBar");
+let statusMessage = document.getElementById("statusMessage");
+let feedButton = document.getElementById("feed");
 let sleepButton = document.getElementById("sleep");
 let playButton = document.getElementById("play");
 
-
-  function feed() {
-    if (hunger < 100) hunger += 10;
-    if (hunger > 100) hunger = 100;
-    energy -= 5;
-    happiness -= 5;
-    updateBars();
-    checkStatus();
+  
+  function updateStatus() {
+    hungerText.textContent = `Honger: ${hunger}`;
+    energyText.textContent = `Energie: ${energy}`;
+    happinessText.textContent = `Geluk: ${happiness}`;
+    
+    hungerBar.style.width = `${hunger}%`;
+    energyBar.style.width = `${energy}%`;
+    happinessBar.style.width = `${happiness}%`;
+  
+    if (hunger <= 0 && energy <= 0 && happiness <= 0) {
+      statusMessage.textContent = "Je Tamagotchi is door jou dood 💀💀";
+      statusMessage.classList.add("dead");
+      clearInterval(timer); 
+    } else {
+      statusMessage.textContent = "Je Tamagotchi leeft 🥳";
+      statusMessage.classList.remove("dead");
+    }
   }
   
-  function sleep() {
-    if (energy < 100) energy += 10;
-    if (energy > 100) energy = 100;
-    hunger -= 5;
-    happiness -= 5;
-    updateBars();
-    checkStatus();
-  }
+  feedButton.addEventListener("click", () => {
+    hunger = Math.min(hunger + 20, 100); 
+    updateStatus();
+  });
   
-  function play() {
-    if (happiness < 100) happiness += 10;
-    if (happiness > 100) happiness = 100;
-    hunger -= 5;
-    energy -= 5;
-    updateBars();
-    checkStatus();
-  }
+  sleepButton.addEventListener("click", () => {
+    energy = Math.min(energy + 20, 100); 
+    updateStatus();
+  });
   
+  playButton.addEventListener("click", () => {
+    happiness = Math.min(happiness + 20, 100); 
+    updateStatus();
+  });
+  const timer = setInterval(() => {
+    hunger = Math.max(hunger - 1, 0); 
+    energy = Math.max(energy - 1, 0); 
+    happiness = Math.max(happiness - 1, 0); 
+    updateStatus();
+  }, 1000);
