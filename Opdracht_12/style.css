@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: white;
+    font-size: 3.5rem;
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b87d1;
+    flex-direction: column;
+}
+button{
+    border: none;
+    border-radius: 0.5rem;
+    background-color: white;
+    width: 10rem;
+    height: 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #2b87d1;
+    cursor: pointer;
+}
