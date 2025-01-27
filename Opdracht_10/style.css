@@ -4,8 +4,11 @@ body {
     overflow: hidden;
     }
     .game {
-    width: 500px;
-    height: 200px;
+    background-image: url('/Opdracht_10/Images/nyan-cat-background.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 3000px;
+    height: 500px;
     background-color: #eee;
     position: relative;
     overflow: hidden;
@@ -14,29 +17,56 @@ body {
     display: none;
     }
     .dinosaur {
-        width: 50px;
-        height: 50px;
-        background-color: #333;
+        background-image: url(/Opdracht_10/Images/Nyan-cat.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        width: 143px;
+        height: 100px;
         position: absolute;
         bottom: 0;
-        left: 50px;
+        left: 0px;
+    
         }
         .obstacle {
-        width: 20px;
+        background-image: url(/Opdracht_10/Images/Geest.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        width: 50px;
         height: 50px;
-        background-color: red;
         position: absolute;
         bottom: 0;
         left: 500px;
         animation: moveLeft 2s linear infinite;
-
+        
         }
-        @keyframes moveLeft {
-            0% {
-            left: 500px;
-            }
-            100% {
-            left: -20px;
-            }
-            }
+      @keyframes moveLeft {
+    0% {
+    left: 500px;
+    }
+    100% {
+    left: -20px;
+    }
+}
+@keyframes flyLeft {
+    0% {
+    left: 500px;
+    }
+    100% {
+    left: -20px;
+    }
+}
+@keyframes jump {
+    0% {
+    bottom: 0;
+    }
+    50% {
+    bottom: 150px;
+    }
+    100% {
+    bottom: 0;
+    }
+}
+
                     
