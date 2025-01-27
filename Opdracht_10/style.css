@@ -7,8 +7,8 @@ body {
     background-image: url('/Opdracht_10/Images/nyan-cat-background.gif');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 3000px;
-    height: 500px;
+    width: 500px;
+    height: 200px;
     background-color: #eee;
     position: relative;
     overflow: hidden;
@@ -21,19 +21,19 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
 
-        width: 143px;
-        height: 100px;
+        width: 71px;
+        height: 50px;
         position: absolute;
         bottom: 0;
         left: 0px;
     
         }
         .obstacle {
-        background-image: url(/Opdracht_10/Images/Geest.png);
+        background-image: url(/Opdracht_10/Images/tac-nayn.gif);
         background-size: cover;
         background-repeat: no-repeat;
 
-        width: 50px;
+        width: 71px;
         height: 50px;
         position: absolute;
         bottom: 0;

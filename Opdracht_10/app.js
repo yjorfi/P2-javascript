@@ -1,17 +1,16 @@
 const dinosaur = document.querySelector('.dinosaur');
 const obstacle = document.querySelector('.obstacle');
-const bird = document.querySelector('.bird');
 const gameOverText = document.querySelector('.game-over');
 let isJumping = false;
 let isGameOver = false;
 document.addEventListener('keydown', function (event) {
     if (event.key === 'w' && !isJumping && !isGameOver) {
         isJumping = true;
-        dinosaur.style.animation = 'jump 1.5s';
+        dinosaur.style.animation = 'jump 1s';
         setTimeout(() => {
             dinosaur.style.animation = 'none';
             isJumping = false;
-        }, 800);
+        }, 8000);
     }
 });
 
@@ -31,7 +30,6 @@ function checkCollision() {
 
     
 setInterval(checkCollision, 10);
-setInterval(spawnBird, 20000);
 
 function gameIsOver() {
     isGameOver = true;
