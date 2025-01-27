@@ -1,6 +1,7 @@
 const dinosaur = document.querySelector('.dinosaur');
-const obstacle = document.querySelector('.obstacle');
-const gameOverText = document.querySelector('.game-over');
+const obstacle = document.querySelector('.obstacle'); 
+const gameOverText = document.querySelector('.game-over'); // haalt elementen uit de html op
+
 let isJumping = false;
 let isGameOver = false;
 document.addEventListener('keydown', function (event) {
