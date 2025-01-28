@@ -2,7 +2,11 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    }
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0;
+      }
     .game {
     background-image: url('/Opdracht_10/Images/nyan-cat-background.gif');
     background-size: cover;
@@ -12,6 +16,7 @@ body {
     background-color: #eee;
     position: relative;
     overflow: hidden;
+    top: 200px;
     }
 .game-over {
     display: none;
